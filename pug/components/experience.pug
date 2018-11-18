@@ -1,0 +1,12 @@
+.experience
+    h2.title.title--experience
+        span.small What I Do
+        span.big My
+            strong Experience
+    -var years = ['2008 - 2009', '2009 - 2011', '2011 - 2012', '2012 - 2014', '2014 - 2016', '2016 - 2018'];
+    -var jobs = ['web developer in udemy', 'web designer in themeforest', 'Graphic Designer in 99Design', 'front end developer in Upwork', 'web developer in freelancer', 'front end in fievrre'];
+    -for(let i = 0;i < years.length;i++)
+        .job
+            h3.job__year= years[i]
+            h2.job__title= jobs[i]
+            p.job__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

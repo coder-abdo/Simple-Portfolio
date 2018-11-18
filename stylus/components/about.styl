@@ -1,0 +1,85 @@
+@import 'base/varibales'
+@import 'base/mixins'
+@import 'base/general'
+@import 'buttons'
+
+.about
+    min-height 100vh
+    width 100%
+    background-color $white
+    flex()
+    flex-direction column
+    padding 10rem 4rem
+    position relative
+    @media(min-width 50em)
+        flex-direction row
+    &::before
+    &::after
+        after-before()
+        border-bottom 50px solid $grey
+        bottom 0
+    &::before
+        border-right 50vw solid transparent
+        left 0
+    &::after
+        border-left 50vw solid transparent
+        right 0
+    &__video
+        min-height 100rem
+        width 100%
+        background-image url('../images/about-img.jpg')
+        background-size cover
+        background-position center center
+        flex(center, center)
+        @media(min-width 50em)
+            flex-basis 45%
+            height 50vh
+    &__skills
+        padding-top 4rem
+        color $black
+        @media(min-width 50em)
+            flex-basis 55%
+            padding-left 2rem
+    &__title
+        flex()
+        flex-direction column
+        .small
+            color $light-blue
+            font-size 2rem
+            font-weight 400
+            margin-bottom 4rem
+        .big
+            font-size 3rem
+            font-weight 700
+            margin-bottom 4rem
+    &__desc
+        font-size 1.8rem
+        margin-bottom 4rem
+        font-weight 400
+    .skills
+        margin-bottom 4rem
+        .skill
+            &:not(:last-child)
+                margin-bottom 2rem
+            &__name
+                flex(space-between, baseline)
+                margin-bottom 1rem
+                .name
+                    font-size 2rem
+                    font-weight 700
+                .percent
+                    font-size 2rem
+                    font-weight 300
+            &__body
+                width 100%
+                height 2rem
+                border-radius 10rem
+                background-color $dark-grey
+                .inner
+                    background-color $light-blue
+                    width 0%
+                    height 100%
+                    border-radius 10rem
+                    transition width 300ms
+
+

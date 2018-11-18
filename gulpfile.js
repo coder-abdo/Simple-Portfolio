@@ -10,8 +10,8 @@ gulp.task('serve', ['stylus', 'html'], function() {
         server: "./"
     });
 
-    gulp.watch("stylus/*.styl", ['stylus']);
-    gulp.watch("pug/*.pug", ['html']);
+    gulp.watch("stylus/**/*.styl", ['stylus']);
+    gulp.watch("pug/**/*.pug", ['html']);
     gulp.watch("app/*.js").on('change', browserSync.reload);
 });
 

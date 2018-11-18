@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
+    <!-- HEADER-->
     <header class="header">
       <nav class="header__nav nav">
         <h4 class="nav__logo">Abdo</h4>
@@ -38,11 +39,87 @@
           <li class="list"><a class="social-link" href="#"><i class="fab fa-twitter"></i></a></li>
           <li class="list"><a class="social-link" href="#"><i class="fab fa-behance"></i></a></li>
           <li class="list"><a class="social-link" href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul><a class="btn btn--scroll" href="#"><i class="fas fa-angle-down"></i></a>
+        </ul><a class="btn btn--scroll" href="#about"><i class="fas fa-angle-down"></i></a>
       </div>
     </header>
     <!-- About Section-->
-    <section class="about" id="about"></section>
+    <section class="about" id="about">
+      <div class="about__video"><a class="btn btn--play" href="#"><i class="fas fa-play"></i></a></div>
+      <div class="about__skills">
+        <h2 class="about__title"><span class="small">I'M Abdelmonaem</span><span class="big">I'm Web Developer - Front End Developer - Web Designer</span></h2>
+        <p class="about__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas autem voluptatibus neque odit animi cupiditate deserunt, repellendus minus aliquam, minima officiis necessitatibus magni vel? Nemo ipsa cum laborum maiores quidem.</p>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill__name">
+              <h3 class="name">Branding</h3><span class="percent">92%</span>
+            </div>
+            <div class="skill__body">
+              <div class="inner" data-skill="92%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__name">
+              <h3 class="name">Design</h3><span class="percent">95%</span>
+            </div>
+            <div class="skill__body">
+              <div class="inner" data-skill="95%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__name">
+              <h3 class="name">Development</h3><span class="percent">95%</span>
+            </div>
+            <div class="skill__body">
+              <div class="inner" data-skill="95%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__name">
+              <h3 class="name">Marketing</h3><span class="percent">89%</span>
+            </div>
+            <div class="skill__body">
+              <div class="inner" data-skill="89%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="about__cta"><a class="btn btn--cta active" href="#">Download My CV</a><a class="btn btn--cta" href="#">Contact Me</a>
+        </div>
+      </div>
+    </section>
+    <!-- EXPERIENCE SECTION-->
+    <div class="experience">
+      <h2 class="title title--experience"><span class="small">What I Do</span><span class="big">My<strong>Experience</strong></span></h2>
+      <div class="job">
+        <h3 class="job__year">2008 - 2009</h3>
+        <h2 class="job__title">web developer in udemy</h2>
+        <p class="job__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="job">
+        <h3 class="job__year">2009 - 2011</h3>
+        <h2 class="job__title">web designer in themeforest</h2>
+        <p class="job__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="job">
+        <h3 class="job__year">2011 - 2012</h3>
+        <h2 class="job__title">Graphic Designer in 99Design</h2>
+        <p class="job__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="job">
+        <h3 class="job__year">2012 - 2014</h3>
+        <h2 class="job__title">front end developer in Upwork</h2>
+        <p class="job__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="job">
+        <h3 class="job__year">2014 - 2016</h3>
+        <h2 class="job__title">web developer in freelancer</h2>
+        <p class="job__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="job">
+        <h3 class="job__year">2016 - 2018</h3>
+        <h2 class="job__title">front end in fievrre</h2>
+        <p class="job__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/typed.js/lib/typed.min.js"></script>
     <script src="app/app.js"></script>

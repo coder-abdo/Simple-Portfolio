@@ -11,12 +11,29 @@
         smartBackspace: true, // this is a default
         loop: true
       });
-      $(win).on('scroll', makeNavFixed);
+      var skillsTop = $('#about').offset().top;
+      $(win).on('scroll', function () {
+        makeNavFixed();
+        makeSkillMove();
+      });
       function makeNavFixed(){
           if($(win).scrollTop() >= 100){
               $('.header__nav').addClass('fixed')
           }else{
             $('.header__nav').removeClass('fixed')
+          }     
+      }
+      function makeSkillMove() {
+          if($(win).scrollTop() >= skillsTop){
+              $('.skill__body .inner').each(function(){                  
+                var percent = $(this).data('skill');
+                setTimeout(() => {
+                    $(this).css({
+                        "width": percent
+                    })
+                    
+                }, 300);
+              });
           }
       }
 })(window, document, jQuery);

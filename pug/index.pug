@@ -6,38 +6,15 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
         link(rel="stylesheet", href="node_modules/@fortawesome/fontawesome-free/css/all.min.css")
-        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900")
         link(rel="stylesheet", href="css/main.css")
     body
-        header.header
-            -var listItems = ['home', 'About', 'services', 'work', 'blog', 'contact'];
-            -var icons = ['facebook-f', 'twitter', 'behance', 'instagram']
-                nav.header__nav.nav
-                    h4.nav__logo Abdo
-                    button.nav__btn
-                        -for(let k = 0;k < 3;k++)
-                            span.menu
-                    ul.nav__list.vertical__menu.hide
-                        -for(let i = 0;i < listItems.length;i++)
-                            li.nav__item
-                                if i === 0
-                                    a(href="#" class="nav__link active")= listItems[i]
-                                else
-                                    a(href="#" class="nav__link")= listItems[i]
-                .header__home
-                    span.small welcome there!
-                    h1.header__title I'M
-                        span#creative
-                    h2.header__subtitle web developer - front end developer - web designer
-                    ul.header__social-links
-                        -for(let j = 0;j < icons.length;j++)
-                            li.list
-                                a(href="#" class="social-link")
-                                    i(class=`fab fa-${icons[j]}`)
-                    a(href="#").btn.btn--scroll
-                        i(class="fas fa-angle-down")
+        // HEADER
+        include components/header
         // About Section
-        section#about.about
+        include components/about
+        // EXPERIENCE SECTION
+        include components/experience
         script(src="node_modules/jquery/dist/jquery.min.js")
         script(src="node_modules/typed.js/lib/typed.min.js")
         script(src="app/app.js")

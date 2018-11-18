@@ -1,0 +1,26 @@
+section#about.about
+    .about__video
+        a(href="#" class="btn btn--play")
+            i(class="fas fa-play")
+    .about__skills
+        h2.about__title
+            span.small I'M Abdelmonaem
+            span.big I'm Web Developer - Front End Developer - Web Designer
+        p.about__desc Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas autem voluptatibus neque odit animi cupiditate deserunt, repellendus minus aliquam, minima officiis necessitatibus magni vel? Nemo ipsa cum laborum maiores quidem.
+        .skills
+            -var skills = ['Branding', 'Design', 'Development', 'Marketing'];
+            -var percent = ['92%', '95%', '95%', '89%'];
+            -for(let i = 0;i < skills.length;i++)
+                .skill
+                    .skill__name
+                        h3.name= skills[i]
+                        span.percent= percent[i]
+                    .skill__body
+                        .inner(data-skill=`${percent[i]}`)
+        .about__cta
+            -var btnTexts = ['Download My CV','Contact Me'];
+            -for(let j = 0;j < btnTexts.length;j++)
+                if j === 0
+                    a(href='#' class="btn btn--cta active")= btnTexts[j]
+                else
+                    a(href='#' class="btn btn--cta")= btnTexts[j]
