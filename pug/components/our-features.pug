@@ -1,0 +1,19 @@
+.our-featyres
+    .features-container
+        .features__introduction
+            h2.features-heading
+                span.short Highly Creative Solutions
+                span.long The best creativity is the result of good work habits.
+            p.intoduction Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        .features
+            -var icons = ['pencil-ruler', 'coins', 'layer-group', 'pen-nib'];
+            -var titles = ['Creative Design', 'Retina Ready', 'Responsive', 'Modern Design']
+            -for(let i = 0;i < icons.length;i++)
+                .feature
+                    .feature__icon
+                        i(class=`fas fa-${icons[i]}`)
+                    .feature__text
+                        h2.feature__title= titles[i]
+                        p.feature__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed tempor labore dolore.
+    .features__img
+

@@ -63,7 +63,10 @@
                 transform scaleX(1)
         &.active
             color $white
-            margin-right 2rem
+            margin-right 0
+            margin-bottom 2rem
+            @media(min-width 37.5em)
+                margin-right 2rem
             &::after
                 background-color $light-blue
                 transform scaleX(1)

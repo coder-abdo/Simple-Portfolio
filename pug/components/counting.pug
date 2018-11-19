@@ -1,0 +1,11 @@
+.counting
+    -var icons = ['far fa-file-code', 'fas fa-video', 'fas fa-award', 'far fa-smile'];
+    -var text = ['Projects', 'Videos', 'Awards', 'Clients'];
+    -var data = ['895', '600', '250', '970'];
+    -for(let i = 0;i < icons.length;i++)
+        .counting__content
+            .icon
+                i(class=`${icons[i]}`)
+            .counting__desc
+                span(id=`count-${i + 1}`).num= data[i]
+                h2.name= text[i]

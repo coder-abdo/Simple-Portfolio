@@ -1,0 +1,48 @@
+@import 'base/varibales'
+@import 'base/mixins'
+@import 'base/general'
+@import 'buttons'
+@import 'titles'
+
+.services
+    padding 5rem 1rem
+.services__container
+    display grid
+    grid-template-rows repeat(3, 1fr)
+    grid-template-columns 1fr
+    grid-row-gap 4rem
+    @media(min-width 50em)
+        grid-template-rows 1fr
+        grid-template-columns repeat(3, 1fr)
+        grid-gap 2rem
+
+.service
+    background-color $grey
+    padding 2rem 1rem
+    flex(flex-start, center)
+    flex-direction column
+    transition background-color 300ms
+    box-shadow 0 0 1rem 0 rgba(#000, .15)
+    &:hover
+        background-color $light-blue
+        .service__icon
+        .service__name
+        .service__desc
+            color $white
+    &__icon
+    &__name
+    &__desc
+        transition color 300ms 150ms
+    &__icon
+        font-size 3rem
+        color $light-blue
+        margin-bottom 2rem
+    &__name
+        color $black
+        font-size 2.5rem
+        font-weight 700
+        margin-bottom 2rem
+    &__desc
+        color $dark-grey
+        font-size 1.8rem
+        font-weight 400

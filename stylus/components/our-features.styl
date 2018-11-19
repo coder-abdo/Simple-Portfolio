@@ -1,0 +1,66 @@
+@import 'base/varibales'
+@import 'base/mixins'
+@import 'base/general'
+@import 'buttons'
+@import 'titles'
+.our-featyres
+    background-color $grey
+    padding 4rem 2rem
+    flex()
+    flex-direction column
+    @media(min-width 50em)
+        flex-direction row
+.features-container
+    padding 2rem 0
+    flex-basis 55%
+    .intoduction
+        font-size 2rem
+        color $dark-grey
+        margin-bottom 2rem
+.features-heading
+    flex()
+    flex-direction column
+    margin-bottom 2rem
+    .short
+        color $light-blue
+        font-size 2rem
+        font-weight 400
+        margin-bottom 2rem
+    .long
+        color $black
+        font-size 3rem
+        font-weight 700
+
+.features
+    display grid
+    grid-template-rows repeat(4, 1fr)
+    grid-template-columns 1fr
+    @media(min-width 50em)
+        grid-template-rows repeat(2, 1fr)
+        grid-template-columns repeat(2, 1fr)
+        grid-gap 2rem
+.feature
+    flex()
+    flex-direction column
+    margin-bottom 4rem
+    padding 1rem 2rem
+    &__icon
+        color $light-blue
+        font-size 3rem
+        font-weight 300
+        margin-bottom 2rem
+    &__title
+        font-size 2.5rem
+        font-weight 700
+        margin-bottom 2rem
+        color $black
+    &__desc
+        font-size 2rem
+        font-weight 400
+        color $dark-grey
+.features__img
+    background-image url('../images/feature.jpg')
+    background-size cover
+    background-position center center
+    flex-basis 45%
+    min-height 30rem

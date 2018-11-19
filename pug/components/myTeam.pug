@@ -1,0 +1,21 @@
+.team
+    h2.title.title--team
+        span.small Awesome Staff
+        span.big My
+            strong Team
+    .team__developers
+        -var socialIcons = ['facebook-f', 'rss', 'twitter', 'instagram'];
+        -for(let i = 0;i < 3;i++)
+            .developer
+                .developer__card
+                    .developer__img
+                    .developer__social
+                        -for(let j = 0;j < socialIcons.length;j++)
+                            a(href="#" class="icon")
+                                if j === 1
+                                    i(class=`fas fa-${socialIcons[j]}`)
+                                else
+                                    i(class=`fab fa-${socialIcons[j]}`)
+                .developer__name
+                    h2.name John Doe
+                    h3.job-name Web Developer

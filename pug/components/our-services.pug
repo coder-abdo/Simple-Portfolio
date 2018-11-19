@@ -1,0 +1,17 @@
+section#services.services
+    h2.title.title--services
+        span.small What I Offere
+        span.big My
+            strong Services
+    .services__container
+        -var icons = ['pencil-ruler', 'dev', 'paint-brush'];
+        -var services = ['Web Design', 'Web Development', 'Ui & Ux Design'];
+        -for(let i = 0;i < icons.length;i++)
+            .service
+                .service__icon
+                    if i === 1
+                        i(class=`fab fa-${icons[i]}`)
+                    else
+                        i(class=`fas fa-${icons[i]}`)
+                h2.service__name= services[i]
+                p.service__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
