@@ -25,23 +25,56 @@
           this.elm.textContent = t;
         }
       }
-    $('.nav__btn').on('click', function(e){
-        $(this).toggleClass('show');
-        $('.nav__list').toggleClass('hide');
-    });
-    var typed = new Typed('#creative', {
-        strings: ['Abdelmonaem', 'Web Developer', 'Front End Developer', 'Web Designer'],
-        typeSpeed: 100,
-        backSpeed: 40,
-        smartBackspace: true, // this is a default
-        loop: true
-      });
       var skillsTop = $('#about').offset().top;
       var countingTop = $('.counting').offset().top;
-      $(win).on('scroll', function () {
-        makeNavFixed();
-        makeSkillMove();
-        makeCounting();
+      var sibls = n => [...n.parentElement.children].filter(c=>c!=n)
+      $(function () {         
+          $('.nav__btn').on('click', function(e){
+              $(this).toggleClass('show');
+              $('.nav__list').toggleClass('hide');
+          });
+          var typed = new Typed('#creative', {
+              strings: ['Abdelmonaem', 'Web Developer', 'Front End Developer', 'Web Designer'],
+              typeSpeed: 100,
+              backSpeed: 40,
+              smartBackspace: true,
+              loop: true
+            });
+           
+            $(win).on('scroll', function () {
+              makeNavFixed();
+              makeSkillMove();
+              makeCounting();
+              
+            });
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                nav:false,
+                items: 1,
+                center: true,
+                autoplay: true
+            });
+            $('.filters-button-group').on( 'click', 'button', function() {
+                var filterValue = $( this ).attr('data-filter');
+                // use filterFn if matches value
+               doc.querySelectorAll('.grid__item').forEach(function(item){
+                    if(item.classList.contains(filterValue)){
+                        item.style.transform = 'scale(1)';
+                    }else {
+                        item.style.transform = 'scale(0)';
+                    }
+                    if(filterValue === 'all'){
+                        item.style.transform = 'scale(1)';
+                    }
+               });
+              });
+              $('.button-group').each( function( i, buttonGroup ) {
+                var $buttonGroup = $( buttonGroup );
+                $buttonGroup.on( 'click', 'button', function() {
+                  $buttonGroup.find('.is-checked').removeClass('is-checked');
+                  $( this ).addClass('is-checked');
+                });
+              });
       });
       function makeNavFixed(){
           if($(win).scrollTop() >= 100){
@@ -64,15 +97,6 @@
           }
       }
       function makeCounting() {
-        var options = {
-            useEasing: true,
-            useGrouping: true,
-            separator: null,
-            decimal: null
-        };
-        
-        // Find all Statistics on page, put them inside a variable
-        var statistics = $(".num");
         if($(win).scrollTop() >= countingTop){
             var counter1 = new Counter(0, 895, '#count-1', 1500);
             var counter2 = new Counter(0, 1200, '#count-2', 1500);

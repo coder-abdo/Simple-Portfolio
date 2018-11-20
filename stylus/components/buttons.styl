@@ -74,3 +74,20 @@
                 color $light-blue
                 &::after
                     transform scaleX(0)
+
+.button
+    padding 1rem 2rem
+    font-size 1.6rem
+    color $black
+    background-color $grey
+    border-radius 10rem
+    border none 
+    &.is-checked
+        background-color $light-blue
+        color $white
+    &:not(:last-child)
+        margin-right 2rem
+    &:hover
+        cursor pointer
+    &:focus
+        outline none

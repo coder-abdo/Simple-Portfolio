@@ -1,0 +1,10 @@
+.testmonial
+    .testmonial__container
+        .owl-carousel.owl-theme
+            -for(let i = 0;i < 3;i++)
+                .item
+                    .item__img
+                        img(src=`images/say-${i + 1}.jpg`, alt="testmonail image", srcset="")
+                    p.item__quote Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                    h2.item__author John Doe
+                    h3.item__author-job Envato-Author

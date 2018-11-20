@@ -4,9 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Abdo - Creative Personal Portfolio template</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900"/>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
@@ -247,9 +250,51 @@
         </div>
       </div>
     </div>
-    <div class="our-work"></div>
+    <div class="our-work">
+      <h2 class="title title--work"><span class="small">Latest Projects</span><span class="big">My<strong>Work</strong></span></h2>
+      <div class="work">
+        <div class="button-group filters-button-group">
+          <button class="button is-checked" data-filter="all">All</button>
+          <button class="button" data-filter="branding">Branding</button>
+          <button class="button" data-filter="photoshop">Photoshop</button>
+          <button class="button" data-filter="illustrator">Illustrator</button>
+        </div>
+        <div class="grid">
+          <div class="grid__item photoshop" data-category="photoshop"></div>
+          <div class="grid__item branding" data-category="branding"></div>
+          <div class="grid__item photoshop" data-category="photoshop"></div>
+          <div class="grid__item branding" data-category="branding"></div>
+          <div class="grid__item illustrator" data-category="illustrator"></div>
+        </div>
+      </div>
+    </div>
+    <div class="testmonial">
+      <div class="testmonial__container">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="item__img"><img src="images/say-1.jpg" alt="testmonail image" srcset=""/></div>
+            <p class="item__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <h2 class="item__author">John Doe</h2>
+            <h3 class="item__author-job">Envato-Author</h3>
+          </div>
+          <div class="item">
+            <div class="item__img"><img src="images/say-2.jpg" alt="testmonail image" srcset=""/></div>
+            <p class="item__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <h2 class="item__author">John Doe</h2>
+            <h3 class="item__author-job">Envato-Author</h3>
+          </div>
+          <div class="item">
+            <div class="item__img"><img src="images/say-3.jpg" alt="testmonail image" srcset=""/></div>
+            <p class="item__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <h2 class="item__author">John Doe</h2>
+            <h3 class="item__author-job">Envato-Author</h3>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/typed.js/lib/typed.min.js"></script>
+    <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="app/app.js"></script>
   </body>
 </html>

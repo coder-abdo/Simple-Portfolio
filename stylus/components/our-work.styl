@@ -4,4 +4,70 @@
 @import 'buttons'
 @import 'titles'
 .our-work
-    height 100vh
+    padding 5rem 2rem
+
+.button-group
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items center
+    margin-bottom 4rem
+
+.grid
+    padding 1rem
+    display grid
+    grid-template-rows 50rem repeat(4, 25rem)
+    grid-template-columns 1fr
+    grid-gap 2rem
+    @media(min-width 37.5em)
+        grid-template-rows repeat(3, 25rem)
+        grid-template-columns repeat(2, 1fr)
+    @media(min-width 50em)
+        grid-template-rows repeat(2, 25rem)
+        grid-template-columns repeat(3, 1fr)
+    &__item
+        background-size cover
+        background-position center center
+        border-radius 5px
+        box-shadow 0 2px 1rem 0 rgba(#000, .15)
+        transition transform 300ms
+        &:nth-child(1)
+            background-image url('../images/photoshop-01.jpg')
+            @media(min-width 37.5em)
+                grid-row 1 / 2
+                grid-column 1 /span 2
+            @media(min-width 50em)
+                    grid-row 1 / span 2
+                    grid-column 1 / 2    
+        &:nth-child(2)
+            background-image url('../images/branding-01.jpg')
+            @media(min-width 37.5em)
+                grid-row 2 / 3
+                grid-column 1 / 2
+            @media(min-width 50em)
+                    grid-row 1 / 2
+                    grid-column 2 / 3   
+        &:nth-child(3)
+            background-image url('../images/photoshop-02.jpg')
+            @media(min-width 37.5em)
+                grid-row 2 / 3
+                grid-column 2 / 3
+            @media(min-width 50em)
+                    grid-row 1 / 2
+                    grid-column 3 / 4
+        &:nth-child(4)
+            background-image url('../images/branding-02.jpg')
+            @media(min-width 37.5em)
+                grid-row 3 / 4
+                grid-column 1 / 2
+            @media(min-width 50em)
+                    grid-row 2 / 3
+                    grid-column 2 / 3
+        &:nth-child(5)
+            background-image url('../images/illustrator.jpg')
+            @media(min-width 37.5em)
+                grid-row 3 / 4
+                grid-column 2 / 3
+            @media(min-width 50em)
+                    grid-row 2 / 3
+                    grid-column 3 / 4

@@ -1,1 +1,20 @@
 .our-work
+    h2.title.title--work
+        span.small Latest Projects
+        span.big My
+            strong Work
+    .work
+        .button-group.filters-button-group
+            -var data = ['all', 'branding', 'photoshop', 'illustrator'];
+            -var text = ['All', 'Branding', 'Photoshop', 'Illustrator'];
+            -for(let i = 0;i < data.length;i++)
+                if i=== 0
+                    button(class="button is-checked" data-filter=`${data[i]}`)= text[i]
+                else
+                    button(class="button" data-filter=`${data[i]}`)= text[i]
+        .grid
+            .grid__item.photoshop(data-category='photoshop')
+            .grid__item.branding(data-category='branding')
+            .grid__item.photoshop(data-category='photoshop')
+            .grid__item.branding(data-category='branding')
+            .grid__item.illustrator(data-category='illustrator')
