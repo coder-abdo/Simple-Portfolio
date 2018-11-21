@@ -1,0 +1,20 @@
+.contact
+    h2.title.title--contact
+        span.small Get In Touch
+        span.big Contact
+            strong Me
+    .contact__info
+        -var icons = ['map-marked-alt', 'mobile-alt', 'envelope'];
+        -var info = ['78 st Merrick Boulevard, New York.', '+(07) 012345678', 'support@info.com'];
+        -for(let i = 0;i < icons.length;i++)
+            .info-container
+                .icon
+                    i(class=`fas fa-${icons[i]}`)
+                h3.text= info[i]
+    .contact__connect
+        input(type="text" class="name" placeholder="Name")
+        input(type="email" class="email" placeholder="Email")
+        input(type="text" class="subject" placeholder="Subject")
+        textarea(class="msg" placeholder="Message" rows="12")
+    a(href="#" class="btn btn--contact") Send Message
+    

@@ -1,0 +1,22 @@
+.prices
+    h2.title.title--prices
+        span.small packages
+        span.big My
+            strong Prices
+    .prices__pack
+        -var prices = ['30', '45', '60'];
+        -var planes = ['Standard', 'Premuim', 'Business'];
+        -for(let i = 0;i < planes.length;i++)
+            .prices__plane
+                h2.prices__title= planes[i]
+                h3.prices__price
+                    span.bigest= prices[i]
+                    span.smallest $
+                .prices__details
+                    -var details = ['12 GB Capacity', '8 Inner Pages', '5 Font Icons', '6 Creative Demo', 'Free Updates'];
+                    -for(let j = 0;j < details.length;j++)
+                        h4.prices__detail= details[j]
+                if i === 1
+                    a(href='#' class="btn btn--cta white") Read More
+                else
+                    a(href='#' class="btn btn--cta") Read More

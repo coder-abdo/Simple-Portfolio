@@ -4,17 +4,19 @@
         span.big My
             strong Work
     .work
+        -var data = ['all', 'branding', 'photoshop', 'illustrator'];
+        -var classes = ['branding', 'photoshop', 'branding', 'illustrator', 'photoshop'];
+        -var text = ['All', 'Branding', 'Photoshop', 'Illustrator'];
         .button-group.filters-button-group
-            -var data = ['all', 'branding', 'photoshop', 'illustrator'];
-            -var text = ['All', 'Branding', 'Photoshop', 'Illustrator'];
             -for(let i = 0;i < data.length;i++)
                 if i=== 0
                     button(class="button is-checked" data-filter=`${data[i]}`)= text[i]
                 else
-                    button(class="button" data-filter=`${data[i]}`)= text[i]
+                    button(class="button" data-filter=`.${data[i]}`)= text[i]
         .grid
-            .grid__item.photoshop(data-category='photoshop')
-            .grid__item.branding(data-category='branding')
-            .grid__item.photoshop(data-category='photoshop')
-            .grid__item.branding(data-category='branding')
-            .grid__item.illustrator(data-category='illustrator')
+            -for(let j = 0;j < classes.length;j++)
+                -var randClass = ~~(Math.random() * classes.length)
+                div(class= `grid__item mix ${classes[randClass]}`)
+                    .grid__details
+                        h2.grid__title Project Name
+                        h3.grid__project= classes[randClass]

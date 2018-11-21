@@ -74,6 +74,43 @@
                 color $light-blue
                 &::after
                     transform scaleX(0)
+        &.white
+            background-color transparent
+            border-color $white
+            color $white
+            &::after
+                background-color $white
+            &:hover
+                color $black
+    &--blog
+        color $dark-grey
+        font-size 2rem
+        font-weight 400
+        transition color 150ms
+        &:hover
+            color $light-blue
+            i
+                margin-left 2rem
+        i
+            margin-left 1rem
+            transition margin-left 300ms
+    &--contact
+        background-color $light-blue
+        color $white
+        font-size 2rem
+        border 1px solid $light-blue
+        padding 1rem 2rem
+        border-radius 10rem
+        margin 0 auto
+        transition-property background-color, color
+        transition-duration 300ms
+        &:hover
+            background-color $white
+            color $light-blue
+        &:focus
+            outline none
+
+
 
 .button
     padding 1rem 2rem

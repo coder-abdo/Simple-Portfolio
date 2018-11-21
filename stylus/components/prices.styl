@@ -1,0 +1,54 @@
+@import 'base/varibales'
+@import 'base/mixins'
+@import 'base/general'
+@import 'buttons'
+@import 'titles'
+
+.prices
+    padding 6rem 3rem
+    background-color $grey
+    &__pack
+        display grid
+        grid-template-rows repeat(3, 1fr)
+        grid-template-columns 1fr
+        grid-gap 4rem
+        @media(min-width 50em)
+            grid-template-rows 1fr
+            grid-template-columns repeat(3, 1fr)
+    &__plane
+        padding 4rem 0
+        flex(space-around, center)
+        flex-direction column
+        color $black
+        background-color $white
+        box-shadow 0 0 1rem 0 rgba(#333, .15)
+        border-radius 5px
+        &:nth-child(2)
+            background-color $light-blue
+            color $white
+            .prices__price
+                .smallest
+                    color $white
+    &__title
+        font-size 2.5rem
+        font-weight 400
+        margin-bottom 2rem
+    &__price
+        flex(flex-start, baseline)
+        margin-bottom 2rem
+        .bigest
+            font-weight 700
+            font-size 4rem
+        .smallest
+            font-weight 400
+            font-size 1.6rem
+            margin-left 0.5rem
+            color $light-blue
+    &__details
+        padding 2rem 0
+        text-align center
+    &__detail
+        font-size 2rem
+        font-weight 400
+        &:not(:last-child)
+            margin-bottom 2rem

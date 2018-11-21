@@ -1,0 +1,20 @@
+.blog
+    h2.title.title--prices
+        span.small Latest News
+        span.big My
+            strong Blog
+    .blog__container
+        -var types = ['Photography', 'Technology', 'Marketing'];
+        -for(let i = 0;i < types.length;i++)
+            .blog__story
+                .blog__img
+                .story
+                    h3.blog__tags
+                        i(class="fas fa-pen")
+                        |Design,
+                        span.tag= types[i]
+                    h2.blog__title Digital without data might as well not be digital.
+                    p.blog__state Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore
+                    a(href="#" class="btn btn--blog") Read More
+                        i(class="fas fa-angle-double-right")
+

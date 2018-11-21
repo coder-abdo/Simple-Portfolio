@@ -1,0 +1,23 @@
+@import 'base/varibales'
+@import 'base/mixins'
+@import 'base/general'
+@import 'buttons'
+
+.clients
+    padding 4rem 0
+    background-color $grey
+    display grid
+    grid-template-rows repeat(6, 1fr)
+    grid-template-columns 1fr
+    grid-column-gap 1rem
+    @media(min-width 37.5em)
+        grid-template-rows repeat(3, 1fr)
+        grid-template-columns repeat(2, 1fr)
+    @media(min-width 50em)
+        grid-template-rows repeat(2, 1fr)
+        grid-template-columns repeat(3, 1fr)
+    @media(min-width 75em)
+        grid-template-rows 1fr
+        grid-template-columns repeat(6, 1fr)
+    .client
+        flex(center, center)

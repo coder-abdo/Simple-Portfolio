@@ -3,7 +3,7 @@ var browserSync = require('browser-sync').create();
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
 var autoprefixer = require('gulp-autoprefixer');
-
+var image = require('gulp-image');
 gulp.task('serve', ['stylus', 'html'], function() {
 
     browserSync.init({
@@ -35,4 +35,9 @@ gulp.task('stylus', function(){
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
 });
+gulp.task('image', function () {
+    gulp.src('./images/*')
+      .pipe(image())
+      .pipe(gulp.dest('./images'));
+  });
 gulp.task('default', ['serve']);

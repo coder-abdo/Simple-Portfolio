@@ -25,12 +25,50 @@
     @media(min-width 50em)
         grid-template-rows repeat(2, 25rem)
         grid-template-columns repeat(3, 1fr)
+    &__details
+        width 100%
+        height 30%
+        flex(center, center)
+        flex-direction column
+        transform scaleY(0)
+        transform-origin bottom left
+        opacity 0
+        background-color $black
+    &__details
+        transition-delay 100ms
+    &__details
+    &__title
+    &__project
+        transition transform 300ms
+    &__title
+    &__project
+        transition-delay 150ms
+    &__title
+        font-size 3rem
+        font-weight 700
+        color $white
+        transform translateY(-3px)
+    &__project
+        color $dark-grey
+        font-size 2rem
+        font-weight 400
+        transform translateY(3px)
     &__item
         background-size cover
         background-position center center
         border-radius 5px
         box-shadow 0 2px 1rem 0 rgba(#000, .15)
         transition transform 300ms
+        flex(flex-start, flex-end)
+        &:hover
+            cursor pointer
+            .grid__details
+                transform scaleY(1)
+                opacity 1
+            .grid__title
+                transform translateY(0)
+            .grid__project
+                transform translateY(0)
         &:nth-child(1)
             background-image url('../images/photoshop-01.jpg')
             @media(min-width 37.5em)
