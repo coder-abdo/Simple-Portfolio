@@ -1,5 +1,5 @@
 header.header
-    -var listItems = ['home', 'About', 'services', 'work', 'blog', 'contact'];
+    -var listItems = ['home', 'about', 'services', 'work', 'blog', 'contact'];
     -var icons = ['facebook-f', 'twitter', 'behance', 'instagram']
         nav.header__nav.nav
             h4.nav__logo Abdo
@@ -10,10 +10,10 @@ header.header
                 -for(let i = 0;i < listItems.length;i++)
                     li.nav__item
                         if i === 0
-                            a(href="#" class="nav__link active")= listItems[i]
+                            a(href=`#${listItems[i]}` class="nav__link active")= listItems[i]
                         else
-                            a(href="#" class="nav__link")= listItems[i]
-        .header__home
+                            a(href=`#${listItems[i]}` class="nav__link")= listItems[i]
+        .header__home#home
             span.small welcome there!
             h1.header__title I'M
                 span#creative

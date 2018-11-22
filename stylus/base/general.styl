@@ -14,6 +14,10 @@ html
 body
     font-family $ff
     height 100%
+    position relative
+    &.hide
+        >:not(:first-child)
+            display none
 
 ul
 li  

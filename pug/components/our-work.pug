@@ -1,4 +1,4 @@
-.our-work
+.our-work#work
     h2.title.title--work
         span.small Latest Projects
         span.big My
@@ -16,7 +16,13 @@
         .grid
             -for(let j = 0;j < classes.length;j++)
                 -var randClass = ~~(Math.random() * classes.length)
-                div(class= `grid__item mix ${classes[randClass]}`)
-                    .grid__details
-                        h2.grid__title Project Name
-                        h3.grid__project= classes[randClass]
+                if j === classes.length -1
+                    div(class= `grid__item mix illustrator}`)
+                        .grid__details
+                            h2.grid__title Project Name
+                            h3.grid__project= classes[randClass]
+                else
+                    div(class= `grid__item mix ${classes[randClass]}`)
+                        .grid__details
+                            h2.grid__title Project Name
+                            h3.grid__project= classes[randClass]

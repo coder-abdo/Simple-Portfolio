@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
-  <body>
+  <body class="hide">
+    <!-- Loading Page-->
+    <div id="loading"><img src="images/loading.gif"/></div>
+    <!-- Button To Top-->
+    <button class="buttonToTop"><i class="fas fa-angle-up"></i></button>
     <!-- Header-->
     <header class="header">
       <nav class="header__nav nav">
@@ -20,21 +24,21 @@
         <button class="nav__btn"><span class="menu"></span><span class="menu"></span><span class="menu"></span>
         </button>
         <ul class="nav__list vertical__menu hide">
-          <li class="nav__item"><a class="nav__link active" href="#">home</a>
+          <li class="nav__item"><a class="nav__link active" href="#home">home</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#">About</a>
+          <li class="nav__item"><a class="nav__link" href="#about">about</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#">services</a>
+          <li class="nav__item"><a class="nav__link" href="#services">services</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#">work</a>
+          <li class="nav__item"><a class="nav__link" href="#work">work</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#">blog</a>
+          <li class="nav__item"><a class="nav__link" href="#blog">blog</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#">contact</a>
+          <li class="nav__item"><a class="nav__link" href="#contact">contact</a>
           </li>
         </ul>
       </nav>
-      <div class="header__home"><span class="small">welcome there!</span>
+      <div class="header__home" id="home"><span class="small">welcome there!</span>
         <h1 class="header__title">I'M<span id="creative"></span></h1>
         <h2 class="header__subtitle">web developer - front end developer - web designer</h2>
         <ul class="header__social-links">
@@ -254,7 +258,7 @@
       </div>
     </div>
     <!-- Our Works Section-->
-    <div class="our-work">
+    <div class="our-work" id="work">
       <h2 class="title title--work"><span class="small">Latest Projects</span><span class="big">My<strong>Work</strong></span></h2>
       <div class="work">
         <div class="button-group filters-button-group">
@@ -264,10 +268,10 @@
           <button class="button" data-filter=".illustrator">Illustrator</button>
         </div>
         <div class="grid">
-          <div class="grid__item mix photoshop">
+          <div class="grid__item mix branding">
             <div class="grid__details">
               <h2 class="grid__title">Project Name</h2>
-              <h3 class="grid__project">photoshop</h3>
+              <h3 class="grid__project">branding</h3>
             </div>
           </div>
           <div class="grid__item mix branding">
@@ -288,10 +292,10 @@
               <h3 class="grid__project">branding</h3>
             </div>
           </div>
-          <div class="grid__item mix photoshop">
+          <div class="grid__item mix illustrator}">
             <div class="grid__details">
               <h2 class="grid__title">Project Name</h2>
-              <h3 class="grid__project">photoshop</h3>
+              <h3 class="grid__project">branding</h3>
             </div>
           </div>
         </div>
@@ -362,7 +366,7 @@
       </div>
     </div>
     <!-- Blog Section-->
-    <div class="blog">
+    <div class="blog" id="blog">
       <h2 class="title title--prices"><span class="small">Latest News</span><span class="big">My<strong>Blog</strong></span></h2>
       <div class="blog__container">
         <div class="blog__story">
@@ -401,7 +405,7 @@
       <div class="client"><img src="images/brand-6.png" alt="client"/></div>
     </div>
     <!-- Contact Section-->
-    <div class="contact">
+    <div class="contact" id="contact">
       <h2 class="title title--contact"><span class="small">Get In Touch</span><span class="big">Contact<strong>Me</strong></span></h2>
       <div class="contact__info">
         <div class="info-container">
@@ -424,6 +428,18 @@
         <textarea class="msg" placeholder="Message" rows="12"></textarea>
       </div><a class="btn btn--contact" href="#">Send Message</a>
     </div>
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="footer__social">
+        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="icon"><i class="fab fa-twitter"></i></div>
+        <div class="icon"><i class="fab fa-behance"></i></div>
+        <div class="icon"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="footer__copyright">
+        <p class="copyright">&copy; 2018 Designed by<strong>Dragon-themes</strong></p>
+      </div>
+    </footer>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/typed.js/lib/typed.min.js"></script>
     <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>

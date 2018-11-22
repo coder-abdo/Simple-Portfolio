@@ -1,0 +1,9 @@
+footer.footer
+    .footer__social
+        -var icons = ['facebook-f', 'twitter', 'behance', 'instagram'];
+        -for(let i = 0;i < icons.length;i++)
+            .icon
+                i(class=`fab fa-${icons[i]}`)
+    .footer__copyright
+        p.copyright &copy; 2018 Designed by
+            strong Dragon-themes

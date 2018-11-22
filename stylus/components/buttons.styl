@@ -1,6 +1,6 @@
 .btn
     &--scroll
-        margin-top 15rem
+        margin-top 10rem
         font-size 5rem
         color $white
         animation up-down 2s linear infinite
@@ -124,6 +124,31 @@
         color $white
     &:not(:last-child)
         margin-right 2rem
+    &:hover
+        cursor pointer
+    &:focus
+        outline none
+
+.buttonToTop
+    position fixed
+    bottom 1rem
+    right 2rem
+    width 6rem
+    height 6rem
+    border-radius 50%
+    background-color $dark-grey
+    color $white
+    font-size 2rem
+    flex(center, center)
+    opacity 0
+    visibility hidden
+    transition-property opacity, visibility
+    transition-duration 300ms
+    z-index 10000
+    border none
+    &.show
+        opacity 1
+        visibility visible
     &:hover
         cursor pointer
     &:focus

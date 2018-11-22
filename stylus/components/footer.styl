@@ -1,0 +1,29 @@
+@import 'base/varibales'
+@import 'base/mixins'
+@import 'base/general'
+
+.footer
+    background-color $black
+    color $white
+    padding 5rem 2.5rem
+    &__social
+        flex(center, center)
+        margin-bottom 4rem
+        .icon
+            width 6rem
+            height 6rem
+            background-color transparent
+            border-radius 50%
+            flex(center, center)
+            transition background-color 300ms
+            font-size 2rem
+            &:not(:last-child)
+                margin-right 2rem
+            &:hover
+                cursor pointer
+                background-color $light-blue
+    &__copyright
+        flex(center, center)
+        font-size 2.5rem
+        strong
+            margin-left 1rem
